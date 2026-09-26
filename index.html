@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+
+    <style>
+        body{
+            font-family: Verdana;
+            font-size: 1.5em;
+        }
+
+        input{
+            font-family: Verdana;
+            font-size: 1em;
+        }
+
+        button{
+            font-family: Verdana;
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">welcome</h1>
+
+    <label id="label">enter your username</label>:
+    <input id="input">
+
+    <button id="button">submit</button>
+
+    <a href="java projects.zip" download>Download My Folder</a>
+
+    <script>
+        let family = [ "marwa","mariam","kaddour","khadija","halima", "zaynab", "amina","mohamed","ima","nasira","ami ali"];
+
+        let username;
+
+        document.getElementById("button").onclick = function () {
+            username = document.getElementById("input").value;
+
+            if (username === "ag_guy") {
+                document.getElementById("h1").innerHTML =
+                    "you are recognized as the owner of this site, ag_guy";
+            }
+            else if (family.includes(username)) {
+                document.getElementById("h1").innerHTML =
+                    `you are recognized as a family member, ${username}`;
+            }
+            else {
+                document.getElementById("h1").innerHTML =
+                    `you are not recognized, ${username}`;
+            }
+        };
+    </script>
+</body>
+</html>
